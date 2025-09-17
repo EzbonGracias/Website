@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>E's Portfolio</title>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<style type="text/css">
+body {
+    background-color: #000000;
+}
+body,td,th {
+    color: #FFFFFF;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    font-size: 12px;
+}
+a:link {
+    color: #A100E8;
+}
+a:visited {
+    color: #5000E4;
+}
+a:hover {
+    color: #A800D5;
+}
+a:active {
+    color: #52007C;
+}
+</style>
+</head>
+
+<center></center><body onLoad="MM_preloadImages('Images/New Project (2).png','Images/New Project.png','Images/New Project (3).png','Images/New Projectss.png','Images/ss.png','Images/New Project (4).png','Images/asassasasasa.png')">
+<table width="1546" border="1">
+  <tbody>
+    <tr>
+      <td width="200"><a href="Page 1 (Home).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','Images/New Project.png',1)"><img src="Images/New Project (1).png" alt="" width="200" height="53" id="Home"></a></td>
+      <td width="250"><a href="Page 2 (Projects).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Projects','','Images/New Project (3).png',1)"><img src="Images/New Project (2).png" alt="" width="250" height="101" id="Projects"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','Images/New Project.png',1)"></a></td>
+      <td width="200"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Projects','','Images/New Project (3).png',1)"></a><a href="Page 3 (Doom).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Doom','','Images/New Projectss.png',1)"><img src="Images/New Pssroject (1).png" alt="" width="200" height="65" id="Doom"></a></td>
+      <td width="260"><a href="Page 4 (Review).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Reviews','','Images/ss.png',1)"><img src="Images/sss.png" alt="" width="260" height="74" id="Reviews"></a></td>
+      <td width="270"><a href="Page 5 (About Me).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','Images/New Project (4).png',1)"><img src="Images/New Project (5).png" alt="" width="270" height="80" id="About"></a></td>
+      <td width="326"><a href="Page 6 (Contact Me).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cONTACT','','Images/asassasasasa.png',1)"><img src="Images/sassasa.png" alt="" width="330" height="103" id="cONTACT"></a></td>
+    </tr>
+    <tr>
+      <td height="942" colspan="6" bgcolor="#000000"><h2><br>
+        Who am I?<br>
+        <br>
+I am Ezbon, age 17 and I am currently doing the Computing course in Richmond upon Thames College. <br>
+I can code in Lua,<br> 
+I am currently working on improving my C++ and C# skills and have experience working on javascript to create a discord bot and a website in the past. <br>
+<br>
+However, I HATE python.  <br>
+      </h2>
+        <h1><img src="Images/javascript-logo.png" width="200" height="201" alt=""/><img src="Images/Node.js_logo.svg.png" width="300" height="184" alt=""/><img src="Images/image.png" width="200" height="194" alt=""/><br>
+          <img src="Images/Logo_C_sharp.svg.png" width="200" height="225" alt=""/>          <img src="Images/maxresdefault.jpg" width="300" height="166" alt=""/><br>
+          <img src="Images/ISO_C++_Logo.svg.png" width="200" height="226" alt=""/><img src="Images/e8d8e554-6ed4-44e0-8c29-7fee9b5665ea.png" width="300" height="166" alt=""/><br>
+    </h1></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
