@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>E's Portfolio with Doom</title>
+  
+  <!-- Your existing styles -->
+  <style>
+    body {
+      background-color: #000000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    td {
+      border: 1px solid #444;
+      padding: 5px;
+      vertical-align: middle;
+    }
+    a img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    /* Doom game container styling */
+    .dosbox-container {
+      width: 640px;
+      height: 400px;
+      margin: 0 auto;
+      border: 2px solid #fff;
+      background: #000;
+      position: relative;
+    }
+    .dosbox-container > .dosbox-overlay {
+      background: url(https://js-dos.com/cdn/DOOM.png) no-repeat center center;
+      background-size: contain;
+    }
+    
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  
+  <!-- Preload images script (your existing one) -->
+  <script type="text/javascript">
+  function MM_preloadImages() { //v3.0
+    var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+  }
+  function MM_swapImgRestore() { //v3.0
+    var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+  }
+  function MM_findObj(n, d) { //v4.01
+    var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+      d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=d.layers[i].document;
+    if(!x && d.getElementById) x=d.getElementById(n); return x;
+  }
+  function MM_swapImage() { //v3.0
+    var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+     if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+  }
+  </script>
+</head>
+<body onLoad="MM_preloadImages('Images/New Project (2).png','Images/New Project.png','Images/New Project (3).png','Images/New Projectss.png','Images/ss.png','Images/New Project (4).png','Images/asassasasasa.png')">
+
+  <table>
+    <tbody>
+      <tr>
+        <td width="200">
+          <a href="Page 1 (Home).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','Images/New Project.png',1)">
+            <img src="Images/New Project (1).png" alt="Home" id="Home" width="200" height="53">
+          </a>
+        </td>
+        <td width="250">
+          <a href="Page 2 (Projects).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Projects','','Images/New Project (3).png',1)">
+            <img src="Images/New Project (2).png" alt="Projects" id="Projects" width="250" height="101">
+          </a>
+        </td>
+        <td width="200">
+          <a href="Page 3 (Doom).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Doom','','Images/New Projectss.png',1)">
+            <img src="Images/New Pssroject (1).png" alt="Doom" id="Doom" width="200" height="65">
+          </a>
+        </td>
+        <td width="260">
+          <a href="Page 4 (Review).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Reviews','','Images/ss.png',1)">
+            <img src="Images/sss.png" alt="Reviews" id="Reviews" width="260" height="74">
+          </a>
+        </td>
+        <td width="270">
+          <a href="Page 5 (About Me).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','Images/New Project (4).png',1)">
+            <img src="Images/New Project (5).png" alt="About" id="About" width="270" height="80">
+          </a>
+        </td>
+        <td width="326">
+          <a href="Page 6 (Contact Me).html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cONTACT','','Images/asassasasasa.png',1)">
+          <img src="Images/sassasa.png" alt="Contact" id="cONTACT" width="330" height="103">
+          </a>
+        </td>
+      </tr>
+
+      <!-- Doom Game embedded here -->
+      <tr>
+        <td colspan="6" style="text-align:center; padding:20px; background:#111;">
+          <div id="dosbox" class="dosbox-container"></div>
+          <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- js-dos API -->
+  <script src="https://js-dos.com/cdn/js-dos-api.js"></script>
+
+  <script>
+    var dosbox = new Dosbox({
+      id: "dosbox",
+      onload: function(dosbox) {
+        // Make sure your DOOM zip file path is correct relative to this file
+        dosbox.run("upload/DOOM-@evilution.zip", "./doom");
+      },
+      onrun: function(dosbox, app) {
+        console.log("App '" + app + "' is running.");
+      }
+    });
+  </script>
+
+</body>
+</html>
